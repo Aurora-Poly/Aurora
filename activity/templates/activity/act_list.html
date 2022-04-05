@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>마이페이지</title>
+  </head>
+  <body>
+    <h1>mypage</h1>
+    {% for a in act_list %}
+      <hr/>
+      <h2><a href="{{a.get_absolute_url}}">{{a.title}}</a></h2>
+      <h3>{{a.created_at}}</h3>
+      <p>{{a.content}}</p>
+      <img src="{{a.poster_image.url}}" alt="image plz">
+    {% endfor %}
+    <h1>mypage</h1>
+  </body>
+</html>
